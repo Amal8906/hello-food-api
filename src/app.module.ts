@@ -10,7 +10,7 @@ import { FoodModule } from './food/food.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://amal8906:8906504605@cluster0.xyp6z.mongodb.net/test?authSource=admin&replicaSet=atlas-kkaw0r-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
+    MongooseModule.forRoot(process.env.MONGODB_URL,
     { useUnifiedTopology: true }),
     UserModule,
     MulterModule.register({ dest: __dirname + '/public/uploads' }),
