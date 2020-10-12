@@ -6,7 +6,8 @@ import { InjectModel } from '@nestjs/mongoose';
 @Injectable()
 export class FoodService {
     constructor(
-        @InjectModel('foodItem') private foodItemModel: Model<FoodItemDocument>
+        @InjectModel('foodItem') 
+        private foodItemModel: Model<FoodItemDocument>
     ){      
     }
 

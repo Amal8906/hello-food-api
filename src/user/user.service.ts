@@ -115,7 +115,7 @@ export class UserService {
   private async checkMobileNumber(mobile){
     const user = await this.userModel.findOne({ mobile});
     if (user) {
-      return { statusCode: 200, message:'Mobile number already registered.'};
+      throw new ConflictException('Mobile number already registered.');
     }
     return { statusCode: 404, message:'Mobile number available for registered.'};
   }
