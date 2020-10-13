@@ -34,7 +34,11 @@ export class FoodItem extends CommonSchema {
     isBookmark: boolean;
 
     @Prop()
+    isVeg: boolean;
+
+    @Prop()
     image: string;
+
 
 }
 export const FoodItemSchema = SchemaFactory.createForClass(FoodItem);
