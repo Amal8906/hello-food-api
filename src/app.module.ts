@@ -11,7 +11,7 @@ import { FoodModule } from './food/food.module';
 @Module({
   imports: [
     // MongooseModule.forRoot(process.env.MONGODB_URL,
-    MongooseModule.forRoot('mongodb+srv://amal8906:8906504605@cluster0.xyp6z.mongodb.net/hello-food?retryWrites=true&w=majority',
+    MongooseModule.forRoot('MongodbConnectionString',
     { useUnifiedTopology: true }),
     UserModule,
     MulterModule.register({ dest: __dirname + '/public/uploads' }),
